@@ -19,3 +19,26 @@ let obj = {
 // const answer = +prompt("Вам есть18?", "");
 // СРАЗУ ПРЕОБРАЗУЕТ ДИНАМИЧЕСКИ В ЧИСЛО и т.д.
 
+const category = 'toys';
+// Интерполяция
+// console.log(`https://someurl.com/${category}`);
+
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+for(let i = 0; i < 2; i++){
+    let LastViewsFilm = prompt("Один из последних просмотренных фильмов?", ""),
+        LastRatingFilm = prompt("На сколько оцените его?", "");
+    personalMovieDB.movies[LastViewsFilm] = LastRatingFilm;
+    console.log(LastViewsFilm + " " + personalMovieDB.movies[LastViewsFilm]);
+}
+console.log(personalMovieDB.count);
+
+
